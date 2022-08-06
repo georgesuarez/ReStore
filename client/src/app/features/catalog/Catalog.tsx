@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { createLogicalAnd } from "typescript";
 import agent from "../../api/agent";
-import LoadingComponents from "../../layout/LoadingComponents";
+import LoadingComponent from "../../layout/LoadingComponent";
 import { Product } from "../../models/product";
 import ProductList from "./ProductList";
 
@@ -16,7 +16,7 @@ export default function Catalog() {
       .finally(() => setLoading(false))
   }, [])
 
-  if (loading) return <LoadingComponents message='Loading products...' />
+  if (loading) return <LoadingComponent message='Loading products...' />
 
   return (
     <>
