@@ -1,6 +1,5 @@
 import { Button, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import { isNoSubstitutionTemplateLiteral, isTemplateExpression } from "typescript";
 import { BasketItem } from "../../models/basket";
 import { Order } from "../../models/order";
 import BasketSummary from "../basket/BasketSummary";
