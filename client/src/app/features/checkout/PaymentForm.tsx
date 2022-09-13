@@ -5,7 +5,6 @@ import { useFormContext } from 'react-hook-form';
 import AppTextInput from '../../components/AppTextInput';
 import { CardCvcElement, CardExpiryElement, CardNumberElement } from '@stripe/react-stripe-js';
 import { StripeInput } from './StripeInput';
-import { useState } from 'react';
 import { StripeElementType } from '@stripe/stripe-js';
 
 interface Props {
