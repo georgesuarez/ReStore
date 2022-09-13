@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import NotFound from "../../errors/NotFound";
 import LoadingComponent from "../../layout/LoadingComponent";
 import { useAppDispatch, useAppSelector } from "../../store/configureStore";
-import { addBasketItemAsync, removeBasketItemAsync, setBasket } from "../basket/basketSlice";
+import { addBasketItemAsync, removeBasketItemAsync } from "../basket/basketSlice";
 import { fetchProductAsync, productSelectors } from "./catalogSlice";
 
 export default function ProductDetails() {
@@ -90,7 +90,7 @@ export default function ProductDetails() {
                     </Grid>
                     <Grid item xs={6}>
                         <LoadingButton
-                            disabled={item?.quantity === quantity || !item && quantity === 0}
+                            disabled={(item?.quantity === quantity) || (!item && quantity === 0)}
                             loading={status.includes('pending')}
                             onClick={handleUpdateCart}
                             sx={{ height: '55px' }}
